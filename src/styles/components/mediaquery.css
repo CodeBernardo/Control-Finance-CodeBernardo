@@ -1,0 +1,41 @@
+@media (min-width: 320px) {
+  .item__button {
+    width: 28.9vw;
+  }
+}
+
+@media (min-width: 375px) {
+  .item__button {
+    width: 29vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .header__container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .add__valueBtn {
+    width: 200px;
+    margin: 5%;
+  }
+
+  .resetList__Btn {
+    width: fit-content;
+  }
+
+  .item__button {
+    width: fit-content;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header__container,
+  main,
+  nav {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Control Finance</title>
+    <link
+      rel="shortcut icon"
+      href="./src/assets/favicon.ico"
+      type="image/x-icon"
+    />
+    <meta
+      name="description"
+      content="Control Finance - Seu controle financeiro"
+    />
+    <link rel="stylesheet" href="./src/styles/reset.css" />
+    <link rel="stylesheet" href="./src/styles/globalStyles.css" />
+    <link rel="stylesheet" href="./src/styles/components/buttons.css" />
+    <link rel="stylesheet" href="./src/styles/components/containers.css" />
+    <link rel="stylesheet" href="./src/styles/components/texts.css" />
+    <link rel="stylesheet" href="./src/styles/components/modals.css" />
+    <link rel="stylesheet" href="./src/styles/components/animations.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
+    <link rel="stylesheet" href="./src/styles/index.css" />
+    <link rel="stylesheet" href="./src/styles/components/mediaquery.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header__bg">
+        <div class="header__container">
+          <h1 class="title1">
+            <span class="title1 brand">Control</span> Finance
+          </h1>
+          <button class="btn--brand text2-b add__valueBtn">
+            Registar novo valor
+          </button>
+        </div>
+      </div>
+      <nav class="nav__container">
+        <h2 class="nav__title title2-m">Resumo financeiro</h2>
+        <ul class="filters__container">
+          <li class="filter__item">
+            <button class="item__button btn--outline text1-b" id="allValues">
+              Todos
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="item__button btn--outline text1-b" id="creditValues">
+              Entradas
+            </button>
+          </li>
+          <li class="filter__item">
+            <button class="item__button btn--outline text1-b" id="debitValues">
+              Saídas
+            </button>
+          </li>
+          <li>
+            <button class="btn--alert text1-b resetList__Btn">
+              Apagar todos os valores
+            </button>
+          </li>
+        </ul>
+        <div class="totalValue__container">
+          <p class="text1-r">Soma dos valores</p>
+          <span id="totalValue" class="text1-b">R$ 00,00</span>
+        </div>
+      </nav>
+    </header>
+    <main id="app">
+      <section class="values">
+        <ul class="values__list__container">
+          <!-- CONTEUDO INJETADO VIA SCRIPT -->
+        </ul>
+      </section>
+    </main>
+    <dialog class="modal__controler">
+      <div class="modal__container">
+        <h2 class="title2-b">Registro de valor</h2>
+        <p class="text1-r modal__info">
+          Digite o valor e em seguida selecione o tipo do valor
+        </p>
+        <form class="form__modal" action="">
+          <label class="text1-b" for="value">Valor</label>
+          <input
+            class="title2-m input"
+            type="number"
+            name="value"
+            id="value"
+            placeholder="00,00"
+          />
+          <span class="title2-m currentCoin">R$</span>
+          <div class="typeOfValue__container">
+            <label class="text1-b" for="typeOfValue">Tipo de valor</label>
+            <select class="text1-m input" name="typeOfValue" id="typeOfValue">
+              <option value="" disabled selected>selecione o tipo</option>
+              <option value="credit">Entrada</option>
+              <option value="debit">Saída</option>
+            </select>
+          </div>
+          <div class="buttons__container">
+            <button class="btn--grey cancelBtn text1-b">Cancelar</button>
+            <button type="submit" id="submitBtn" class="btn--brand text1-b">
+              Inserir valor
+            </button>
+          </div>
+        </form>
+      </div>
+    </dialog>
+    <dialog class="modal__controler--reset">
+      <div class="modal__container--reset">
+        <h2 class="title2-m">Confirmação de reset</h2>
+        <p class="title1">
+          Tem certeza que deseja apagar todos os valores da lista?
+        </p>
+        <p class="text1-r">
+          Após a confirmação o processo não poderá ser desfeito
+        </p>
+        <div class="buttons__container--modal">
+          <button class="cancel__button btn--grey">Cancelar</button>
+          <button class="confirm__button btn--alert2">
+            Sim, desejo excluir
+          </button>
+        </div>
+      </div>
+    </dialog>
+    <script type="module" src="./src/scripts/valuesData.js"></script>
+    <script type="module" src="./src/scripts/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/9cca78556e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+  </body>
+</html>

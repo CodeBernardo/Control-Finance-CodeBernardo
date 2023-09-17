@@ -1,0 +1,85 @@
+.modal__controler,
+.modal__controler--reset {
+  width: 80%;
+  max-width: 500px;
+  border: none;
+  border-radius: var(--radius-1);
+  -webkit-box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.6);
+  -moz-box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.6);
+  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.6);
+  -webkit-animation: swing-in-top-fwd 0.8s
+    cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+  animation: swing-in-top-fwd 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+
+.modal__controler::backdrop,
+.modal__controler--reset::backdrop {
+  backdrop-filter: blur(3px);
+}
+
+.modal__container {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0.625rem;
+}
+
+.modal__info {
+  line-height: 1.5rem;
+}
+
+.form__modal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.93rem;
+}
+
+.typeOfValue__container {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.buttons__container {
+  display: flex;
+  gap: 0.625rem;
+  justify-content: flex-end;
+}
+
+#value {
+  height: 2.5rem;
+  border-radius: var(--radius-1);
+  border: 2px solid var(--color-grey-4);
+  padding-left: 40px;
+}
+
+#typeOfValue {
+  border-radius: var(--radius-1);
+  border: 2px solid var(--color-grey-4);
+  padding: 0.625rem;
+}
+
+.currentCoin {
+  position: relative;
+  width: fit-content;
+  bottom: 2.9375rem;
+  left: 0.8125rem;
+}
+
+.modal__controler--reset {
+  max-width: 560px;
+}
+
+.modal__container--reset {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5625rem;
+}
+
+.buttons__container--modal {
+  align-self: flex-end;
+  display: flex;
+  gap: 0.625rem;
+}

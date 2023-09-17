@@ -1,0 +1,77 @@
+button {
+  height: 2rem;
+  padding-inline: 0.875rem;
+  border-radius: var(--radius-1);
+  border: none;
+  font-family: var(--font-family-1);
+  cursor: pointer;
+}
+
+.btn--brand {
+  background-color: var(--color-brand-1);
+  color: var(--color-grey-5);
+}
+
+.btn--outline {
+  background-color: var(--fixed-white);
+  color: var(--color-grey-1);
+  border: 2px solid var(--color-grey-4);
+}
+
+.btn--brand:hover {
+  background-color: var(--color-brand-2);
+}
+.btn--grey:hover {
+  background-color: var(--color-grey-4);
+}
+
+.btn--outline:hover {
+  background-color: var(--color-brand-3);
+  color: var(--color-brand-2);
+  border: 2px solid var(--color-brand-2);
+}
+
+.btn--outline:focus {
+  background-color: var(--color-brand-3);
+  color: var(--color-brand-2);
+  border: 2px solid var(--color-brand-2);
+}
+
+.trash__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5em;
+  color: var(--color-grey-3);
+}
+
+.trash__button:hover {
+  background-color: var(--color-grey-3);
+  color: var(--color-grey-1);
+  border: none;
+}
+
+.trash__icon {
+  pointer-events: none;
+}
+
+.btn--alert {
+  background-color: var(--alert-2);
+  color: var(--alert-1);
+  border: 2px solid var(--alert-2);
+  opacity: 0.2;
+}
+
+.btn--alert:hover {
+  opacity: 1;
+}
+
+.btn--alert2 {
+  background-color: var(--alert-2);
+  color: var(--fixed-white);
+}
+
+.btn--alert2:hover {
+  background-color: var(--alert-1);
+  color: var(--fixed-white);
+}
